@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 9px 16px;
+  width: 100%;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 22px;
+  color: #161823;
+
+  span {
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+  }
+
+}
+
+.username {
+  font-size: 1.4rem;
+  line-height: 20px;
+  color: rgba(22, 24, 35, 0.5);
+  // font-weight: 400;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+}
+
+.check {
+  margin-left: 6px;
+}
