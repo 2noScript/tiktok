@@ -3,6 +3,10 @@
   align-items: center;
   padding: 9px 16px;
   width: 100%;
+
+  &:hover {
+    background-color: var(--background-hover-primary);
+  }
 }
 
 .avatar {

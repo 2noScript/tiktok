@@ -1,21 +1,58 @@
 @import "normalize.css";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&family=Montserrat+Subrayada:wght@700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+//font emmbeded
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/assets/fonts/ProximaNova-Semibold.woff2);
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/assets/fonts/ProximaNova-Semibold.woff2);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/assets/fonts/Proxima-Nova-Bold.woff);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url(/assets/fonts/Proxima-Nova-Regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SofiaPro";
+  src: url(/assets/fonts/sofiapro-bold.woff);
+  font-weight: 700;
+}
 
 :root {
   //color
   --white: #ffffff;
+
   --primary: rgba(254, 44, 85, 1);
   --black: #000;
   --text-color: #333;
   //default layout
   --default-layout-header-height: 60px;
   --default-layout-width: 1150px;
+  --default-layout-horizonal-spacer: 24px;
+  //hover
+  --background-hover-primary: rgba(22, 24, 35, 0.03);
+
+  //font-name
+  --font-ProximaNova: "ProximaNova", sans-serif;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  // overflow: overlay;
 }
 
 html {
@@ -23,14 +60,27 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-family: "Montserrat Subrayada", sans-serif;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-ProximaNova);
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+  overflow: hidden overlay;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  z-index: 999;
+  background-color: var(--black);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 button,

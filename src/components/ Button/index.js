@@ -17,6 +17,8 @@ function Button({
     outline,
     onClick,
     className,
+    outlinePrimary,
+    outlineBrown,
     ...passProps
 }) {
     let Comp = "button";
@@ -42,6 +44,8 @@ function Button({
         center,
         disable,
         round,
+        outlineBrown,
+        outlinePrimary,
         [className]: className
 
     });

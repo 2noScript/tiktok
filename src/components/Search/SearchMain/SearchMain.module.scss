@@ -1,0 +1,113 @@
+.search,
+.search-results {
+    width: 360px;
+
+    .search-title {
+        height: 30px;
+        padding: 5px 12px;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 20px;
+        color: rgba(22, 24, 35, 0.5);
+    }
+}
+
+.search-results {
+    padding-top: 0;
+    background-color: var(--white);
+    margin: 0;
+    border-radius: 5px;
+}
+
+.search {
+    position: relative;
+    background: rgba(22, 24, 35, 0.06);
+    padding-left: 16px;
+    border-radius: var(--search-border-radius);
+    font-family: var(--font-ProximaNova);
+    height: var(--search-height);
+    display: flex;
+    border: 1.5px solid transparent;
+
+    input {
+        flex: 1;
+        height: 100%;
+        font-size: 1.6rem;
+        padding-right: 40px;
+        color: var(--black);
+        background-color: transparent;
+
+        &:not(:placeholder-shown)~.search-btn {
+            color: rgba(22, 24, 35, 0.75);
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: calc(var(--search-height) - 18px);
+        background-color: rgba(22, 24, 35, 0.12);
+        // background-color: red;
+        width: 1px;
+        top: 9px;
+        right: var(--search-btn-width);
+    }
+
+    &:focus-within {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+}
+
+.clear-btn,
+.loading {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    right: calc(var(--search-btn-width));
+    transform: translateY(-50%);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #a7a7ab;
+}
+
+.loading {
+    animation: spiner 1s linear infinite;
+}
+
+@keyframes spiner {
+    from {
+        transform: translateY(-50%) rotate(0);
+
+    }
+
+    to {
+        transform: translateY(-50%) rotate(360deg);
+
+    }
+}
+
+.search-btn {
+    width: var(--search-btn-width);
+    height: 100%;
+    border-top-right-radius: var(--search-border-radius);
+    border-bottom-right-radius: var(--search-border-radius);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    color: rgba(22, 24, 35, 0.2);
+    font-size: 2rem;
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: rgba(22, 24, 35, 0.06);
+    }
+}
